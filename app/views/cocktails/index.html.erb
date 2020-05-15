@@ -1,11 +1,13 @@
 <div class="container m-3 p-3">
-<h1>Les Cocktails</h1><br>
-
+<h1>Les Cocktails 🍸</h1><br>
     <% @cocktails.each do |cocktail| %>
-      <article>
-      <h4><%= link_to cocktail.name, cocktail %></h4>
-      </article>
+      <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+        <h4><%= link_to cocktail.name, cocktail %></h4>
+        <a data-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
     <% end %>
-<br>
-<%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+  <br>
+  <%= link_to "Create a new cocktail", new_cocktail_path, class: 'btn btn-primary' %>
 </div>
